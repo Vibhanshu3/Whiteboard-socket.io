@@ -70,7 +70,7 @@ const redoDOWN = (received) => {
 };
 
 //socket-io :-
-var socket = io.connect("http://localhost:3000");
+var socket = io.("https://whiteboard-socket-io.herokuapp.com/");
 socket.on("notice", function (message) {
     console.log(message);
     if (message.type === "begin") {
